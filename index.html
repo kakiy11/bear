@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐻 Медвежий улов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐻 Медвежий улов</h1>
+            <p class="subtitle">Поймай как можно больше рыбы до заката!</p>
+        </header>
+
+        <div class="game-controls">
+            <div class="difficulty-selector">
+                <h3>Выбери уровень сложности:</h3>
+                <div class="buttons">
+                    <button class="btn easy" data-difficulty="easy">Легкий (3 рыбы)</button>
+                    <button class="btn medium" data-difficulty="medium">Средний (5 рыб)</button>
+                    <button class="btn hard" data-difficulty="hard">Сложный (10 рыб)</button>
+                </div>
+            </div>
+
+            <button id="startBtn" class="btn start">Начать рыбалку!</button>
+        </div>
+
+        <div class="game-area">
+            <div class="river">
+                <div class="bear">🐻</div>
+                <div id="fishesContainer" class="fishes-container"></div>
+                <div class="sun">☀️</div>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Поймано:</span>
+                    <span id="caughtCount" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Уплыло:</span>
+                    <span id="escapedCount" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Осталось:</span>
+                    <span id="remainingCount" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div id="eventsLog" class="events-log"></div>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h2>Результаты рыбалки</h2>
+            <div id="finalStats" class="final-stats"></div>
+            <button id="restartBtn" class="btn restart">Играть снова</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
